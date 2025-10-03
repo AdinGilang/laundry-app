@@ -43,7 +43,7 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
 
 3. **Install dependensi frontend / asset**
    npm install
-   # atau yarn install
+   atau yarn install
 
 4. **Salin file .env.example ke .env dan konfigurasi
     Atur koneksi database, mail (jika ada), dan variabel lain seperti APP_URL, DB_HOST,              DB_DATABASE, DB_USERNAME, DB_PASSWORD.**
@@ -52,11 +52,11 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
    
 7. **Migrasi & seeding database**
    npm run dev
-    # atau npm run build untuk produksi
+   atau npm run build untuk produksi
 
 9. **Compile asset frontend**
    npm run dev
-   # atau npm run build untuk produksi
+   atau npm run build untuk produksi
 
     
 11. **Jalankan server lokal**
