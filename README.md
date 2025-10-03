@@ -35,8 +35,7 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
 
 1. **Clone repo**  
    ```bash
-   git clone https://github.com/AdinGilang/laundry-app.git
-   cd laundry-app
+   git clone https://github.com/AdinGilang/laundry-app.git && cd laundry-app
 
 2. **Install dependensi backend**  
    ```bash
@@ -45,52 +44,52 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
 3. **Install dependensi frontend / asset**  
    ```bash
    npm install
-   atau yarn install
 
-4. **Salin file**  
+4. **Build asset frontend**  
    ```bash
-   .env.example ke .env dan konfigurasi
-    Atur koneksi database, mail (jika ada), dan variabel lain seperti APP_URL, DB_HOST,    DB_DATABASE, DB_USERNAME, DB_PASSWORD.
+   npm run build
 
-5. **Generate application key**  
+5. **Clear all Laravel application cache.**  
    ```bash
-   git clone https://github.com/AdinGilang/laundry-app.git
-   cd laundry-app
+   php artisan optimize:clear
+
    
 6. **Migrasi & seeding database**  
    ```bash
    php artisan migrate
-    php artisan db:seed   # jika kamu memiliki seeder
+   php artisan db:seed   # jika kamu memiliki seeder
    
 7. **Compile asset frontend**  
    ```bash
    npm run dev
    atau npm run build untuk produksi
     
-8. **Jalankan server lokal**  
+8. **Run the local server**  
    ```bash
    php artisan serve
 
 
-Struktur Direktori Utama
-├── app/           # Kode backend: Model, Controller, Service, dll
+## 📂 Struktur Direktori Utama
+
+├── app/ # Kode backend: Model, Controller, Service, dll
 ├── bootstrap/
 ├── config/
 ├── database/
-│   ├── migrations/
-│   └── seeders/
+│ ├── migrations/
+│ └── seeders/
 ├── public/
 ├── resources/
-│   ├── views/     # Blade templates
-│   └── assets/
+│ ├── views/ # Blade templates
+│ └── assets/
 ├── routes/
-│   └── web.php
+│ └── web.php
 ├── storage/
 ├── tests/
 ├── .env.example
 ├── composer.json
 ├── package.json
 └── README.md
+
 
 
 Penggunaan (Usage)
@@ -100,13 +99,11 @@ Penggunaan (Usage)
    Lihat semua transaksi & laporan
    Manajemen user operator
    
-4. Sebagai Operator:
+3. Sebagai Karyawan:
    Input transaksi baru
    Update status cucian (misalnya “dicuci”, “selesai”, dll)
    
-5. Sebagai pelanggan:
-   Cek status cucian
-   Lihat riwayat transaksi
+
 
    
 
