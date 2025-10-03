@@ -1,61 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laundry App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi manajemen laundry berbasis web sebagai proyek UTS (Ujian Tengah Semester) menggunakan framework PHP / Laravel.
 
-## About Laravel
+Nama Anggota Kelompok 1 :
+Ilham Arif Farabi 2210631170074
+M.Addien Gilang Saputra 2210631170027
+Moh. Dicky Purnama 2210631170031
+Muhammad Ardho Rantisy 2210631170082
+Fabian Nur Rohman 2210631170118
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fitur
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Manajemen user (admin, operator, pelanggan)  
+- Input transaksi laundry  
+- Tracking status cucian  
+- Laporan pendapatan / transaksi  
+- CRUD data paket laundry, harga, jenis layanan  
+- Autentikasi & otorisasi  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🏗️ Teknologi & Dependensi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Komponen | Versi / Catatan |
+|---|---|
+| Framework | Laravel (PHP) |
+| Frontend | Blade, Tailwind CSS, Bootstrap (jika ada) |
+| Database | MySQL / MariaDB |
+| Tools & Lainnya | Composer, Node.js, NPM / Yarn, Vite / Mix (tergantung setup) |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📦 Instalasi & Setup
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
 
-## Laravel Sponsors
+1. **Clone repo**  
+   ```bash
+   git clone https://github.com/AdinGilang/laundry-app.git
+   cd laundry-app
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Install dependensi backend**
+    composer install
 
-### Premium Partners
+3. **Install dependensi frontend / asset**
+   npm install
+   # atau yarn install
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4. **Salin file .env.example ke .env dan konfigurasi
+    Atur koneksi database, mail (jika ada), dan variabel lain seperti APP_URL, DB_HOST,              DB_DATABASE, DB_USERNAME, DB_PASSWORD.**
+5. **Generate application key**
+   php artisan key:generate
+   
+7. **Migrasi & seeding database**
+   npm run dev
+    # atau npm run build untuk produksi
 
-## Contributing
+9. **Compile asset frontend**
+   npm run dev
+   # atau npm run build untuk produksi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    
+11. **Jalankan server lokal**
+    php artisan serve
 
-## Code of Conduct
+Struktur Direktori Utama
+├── app/           # Kode backend: Model, Controller, Service, dll
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+│   ├── views/     # Blade templates
+│   └── assets/
+├── routes/
+│   └── web.php
+├── storage/
+├── tests/
+├── .env.example
+├── composer.json
+├── package.json
+└── README.md
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Penggunaan (Usage)
+1. Daftar akun/login
+2. Sebagai admin:
+   Tambah / ubah / hapus paket laundry
+   Lihat semua transaksi & laporan
+   Manajemen user operator
+   
+4. Sebagai Operator:
+   Input transaksi baru
+   Update status cucian (misalnya “dicuci”, “selesai”, dll)
+   Cetak struk / nota (jika fitur ada)
+   
+5. Sebagai pelanggan:
+   Cek status cucian
+   Lihat riwayat transaksi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
