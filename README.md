@@ -25,9 +25,9 @@ Nama Anggota Kelompok 1 :
 | Komponen | Versi / Catatan |
 |---|---|
 | Framework | Laravel (PHP) |
-| Frontend | Blade, Tailwind CSS, Bootstrap (jika ada) |
+| Frontend | Blade, Tailwind CSS, Bootstrap |
 | Database | MySQL / MariaDB |
-| Tools & Lainnya | Composer, Node.js, NPM / Yarn, Vite / Mix (tergantung setup) |
+| Tools & Lainnya | Composer, Node.js, NPM / Yarn, Vite|
 
 ## 📦 Instalasi & Setup
 
@@ -38,29 +38,39 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
    git clone https://github.com/AdinGilang/laundry-app.git
    cd laundry-app
 
-2. **Install dependensi backend**
-    composer install
+2. **Install dependensi backend**  
+   ```bash
+   composer install
 
-3. **Install dependensi frontend / asset**
+3. **Install dependensi frontend / asset**  
+   ```bash
    npm install
    atau yarn install
 
-4. **Salin file .env.example ke .env dan konfigurasi
-    Atur koneksi database, mail (jika ada), dan variabel lain seperti APP_URL, DB_HOST,              DB_DATABASE, DB_USERNAME, DB_PASSWORD.**
-5. **Generate application key**
-   php artisan key:generate
+4. **Salin file**  
+   ```bash
+   .env.example ke .env dan konfigurasi
+    Atur koneksi database, mail (jika ada), dan variabel lain seperti APP_URL, DB_HOST,    DB_DATABASE, DB_USERNAME, DB_PASSWORD.
+
+5. **Generate application key**  
+   ```bash
+   git clone https://github.com/AdinGilang/laundry-app.git
+   cd laundry-app
    
-7. **Migrasi & seeding database**
+6. **Migrasi & seeding database**  
+   ```bash
+   php artisan migrate
+    php artisan db:seed   # jika kamu memiliki seeder
+   
+7. **Compile asset frontend**  
+   ```bash
    npm run dev
    atau npm run build untuk produksi
-
-9. **Compile asset frontend**
-   npm run dev
-   atau npm run build untuk produksi
-
     
-11. **Jalankan server lokal**
-    php artisan serve
+8. **Jalankan server lokal**  
+   ```bash
+   php artisan serve
+
 
 Struktur Direktori Utama
 ├── app/           # Kode backend: Model, Controller, Service, dll
@@ -93,7 +103,6 @@ Penggunaan (Usage)
 4. Sebagai Operator:
    Input transaksi baru
    Update status cucian (misalnya “dicuci”, “selesai”, dll)
-   Cetak struk / nota (jika fitur ada)
    
 5. Sebagai pelanggan:
    Cek status cucian
