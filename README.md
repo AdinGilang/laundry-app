@@ -11,7 +11,7 @@ Nama Anggota Kelompok 1 :
 
 ## ✨ Fitur
 
-- Manajemen user (admin, operator, pelanggan)  
+- Manajemen user (admin, operator)  
 - Input transaksi laundry  
 - Tracking status cucian  
 - Laporan pendapatan / transaksi  
