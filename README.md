@@ -71,24 +71,26 @@ Berikut langkah-langkah untuk menjalankan aplikasi di lokal:
 
 ## 📂 Struktur Direktori Utama
 
-├── app/ # Kode backend: Model, Controller, Service, dll
+```text
+├── app/           # Kode backend: Model, Controller, Service, dll
 ├── bootstrap/
 ├── config/
 ├── database/
-│ ├── migrations/
-│ └── seeders/
+│   ├── migrations/
+│   └── seeders/
 ├── public/
 ├── resources/
-│ ├── views/ # Blade templates
-│ └── assets/
+│   ├── views/     # Blade templates
+│   └── assets/
 ├── routes/
-│ └── web.php
+│   └── web.php
 ├── storage/
 ├── tests/
 ├── .env.example
 ├── composer.json
 ├── package.json
 └── README.md
+
 
 
 
