@@ -3,11 +3,11 @@
 Aplikasi manajemen laundry berbasis web sebagai proyek UTS (Ujian Tengah Semester) menggunakan framework PHP / Laravel.
 
 Nama Anggota Kelompok 1 :
-Ilham Arif Farabi 2210631170074
-M.Addien Gilang Saputra 2210631170027
-Moh. Dicky Purnama 2210631170031
-Muhammad Ardho Rantisy 2210631170082
-Fabian Nur Rohman 2210631170118
+- Ilham Arif Farabi 2210631170074
+- M.Addien Gilang Saputra 2210631170027
+- Moh. Dicky Purnama 2210631170031
+- Muhammad Ardho Rantisy 2210631170082
+- Fabian Nur Rohman 2210631170118
 
 ## ✨ Fitur
 
